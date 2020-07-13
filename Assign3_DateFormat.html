@@ -1,0 +1,43 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<h2>
+	  To get current formatted date dd/mm/yyyy click on "Get Date" button. 
+	</h2>
+</head> 
+
+
+<body style="text-align:center;"
+	id="body"> 
+	
+    <p id="GFG_UP"> 
+	</p> 
+	<button onclick="gfg_Run()"> 
+		Get Date 
+	</button> 
+	<p id="GFG_DOWN"> 
+	</p>    
+	<script> 
+		var el_up = document.getElementById("GFG_UP"); 
+		var el_down = document.getElementById("GFG_DOWN"); 
+		 var today = new Date(); 
+		el_up.innerHTML = today; 
+		var dd = today.getDate(); 
+		var mm = today.getMonth() + 1; 
+        var yyyy = today.getFullYear(); 
+		 if (dd < 10) { 
+			dd = '0' + dd; 
+		} 
+	 if (mm < 10) { 
+			mm = '0' + mm; 
+	      } 
+		var today = dd + '/' + mm + '/' + yyyy; 
+
+		function gfg_Run() { 
+			el_down.innerHTML = today; 
+		} 
+	</script> 
+</body> 
+
+</html> 
